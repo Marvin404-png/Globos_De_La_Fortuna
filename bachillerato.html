@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Casa de los Globos - Nivel Bachillerato</title>
+    <link rel="stylesheet" href="bachillerato.css">
+    <style>
+        /* Aplicar fondo con CSS en lugar del atributo background */
+        body {
+            background-image: url('img/fondoFeria.jpg');
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Icono de hamburguesa para la barra de navegación -->
+    <div class="menu-icono" onclick="toggleMenu()">
+        <div class="linea"></div>
+        <div class="linea"></div>
+        <div class="linea"></div>
+    </div>
+
+    <!-- Barra de Navegación -->
+    <nav class="navegacion" id="menu">
+        <ul>
+            <li><a href="validacion.html">Regresar página principal</a></li>
+        </ul>
+    </nav>
+
+
+        <!-- Estand de globos -->
+        <div id="juego_contenedor">
+            <div class="estand">
+                <div id="area_juego">
+                    <!-- Globos y trampas aparecerán aquí -->
+                </div>
+                <div id="score">Puntuación: <span id="puntuacion-valor">0</span></div>
+                <div id="temporizador">
+                    Tiempo restante: <span id="tiempo-restante">30</span> segundos
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+         <!-- Cuadro del mensaje de bienvenida -->
+         <div id="cuadro_mensaje">
+            <p id="mensaje"></p> <!-- Aquí se mostrará el nombre del jugador -->
+        </div>
+    
+    <script>
+        // Función para alternar la visibilidad del menú
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('mostrar');
+        }
+
+        // Recuperar el nombre del jugador desde localStorage
+        const nombre1 = localStorage.getItem('nombre');
+        if (nombre1) {
+            document.getElementById('mensaje').textContent = `Hola, ${nombre1}!`;
+        } else {
+            document.getElementById('mensaje').textContent = 'Hola, Jugador!';
+        }
+    </script>
+
+    <!-- Enlazar el archivo JavaScript del juego -->
+    <script src="bachillerato.js"></script>
+
+</body>
+</html>

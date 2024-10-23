@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parvularia - Casa de los Globos</title>
+    <link rel="stylesheet" href="parvu.css">
+</head>
+<body background="img/fondoFeria.jpg">
+
+    <!-- Icono de hamburguesa para la barra de navegación -->
+    <div class="menu-icono" onclick="toggleMenu()">
+        <div class="linea"></div>
+        <div class="linea"></div>
+        <div class="linea"></div>
+    </div>
+
+    <!-- Barra de Navegación -->
+    <nav class="navegacion" id="menu">
+        <ul>
+            <li><a href="validacion.html">Regresar página principal</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Área de juego -->
+    <div id="juego_contenedor">
+        <div class="estand">
+            <div id="letrero"></div>
+            <div id="area_juego">
+                <!-- Globos aparecerán aquí -->
+            </div>
+            <div id="score">Puntuación: <span id="puntuacion-valor">0</span></div>
+            <div id="temporizador">
+                Tiempo restante: <span id="tiempo-restante">30</span> segundos
+            </div>
+        </div>
+    </div>
+          <!-- Cuadro del mensaje de bienvenida -->
+    <div id="cuadro_mensaje">
+        <p id="mensaje"></p> <!-- Aquí se mostrará el nombre del jugador -->
+    </div>
+
+    <script>
+        // Función para alternar la visibilidad del menú
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('mostrar');
+        }
+
+        // Recuperar el nombre del jugador desde localStorage
+        const nombre1 = localStorage.getItem('nombre');
+        const mensajeElemento = document.getElementById('mensaje');
+
+        if (nombre1) {
+            mensajeElemento.textContent = `Hola, ${nombre1}!`;
+        } else {
+            mensajeElemento.textContent = 'Hola, Jugador!';
+        }
+    </script>
+
+    <script src="parvu.js"></script>
+</body>
+</html>

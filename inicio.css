@@ -1,0 +1,135 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Estilo amigable para niños */
+    background-color: #bba2ff; 
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    background: url('https://img.freepik.com/vector-gratis/fondo-carnaval-plano_23-2149257277.jpg?t=st=1726768085~exp=1726771685~hmac=1e2ac72f8bbba9f06347057be43439e2fbd634025fb6ba213990219442baf127&w=740') no-repeat center center/cover;
+    background-repeat: no-repeat;
+}
+
+/* Icono de hamburguesa */
+.menu-icono {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+}
+
+.menu-icono .linea {
+    width: 100%;
+    height: 4px;
+    background-color: black;
+}
+
+/* Barra de navegación oculta por defecto */
+.navegacion {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #4b16df;
+    border-radius: 8px;
+    display: none; /* Oculta inicialmente */
+    padding: 10px;
+}
+
+.navegacion ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navegacion ul li {
+    margin: 10px 0;
+}
+
+.navegacion ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    background-color: #444;
+    border-radius: 4px;
+}
+
+.navegacion ul li a:hover {
+    background-color: #555;
+}
+
+/* Mostrar barra de navegación al pasar el ratón sobre el icono */
+.menu-icono:hover + .navegacion,
+.navegacion:hover {
+    display: block;
+}
+
+/* Mostrar barra de navegación cuando tenga la clase "activo" */
+.navegacion.activo {
+    display: block;
+}
+
+/* Título y Logo */
+.header {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 4;
+}
+
+.logo {
+    width: 400px;
+    margin-bottom: 10px;
+}
+
+/* Botones alineados verticalmente */
+.botones-vertical {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    z-index: 5;
+}
+
+/* Botones con imágenes alusivas */
+.boton {
+    background-color: #43107d;
+    border: 2px solid #FFF;
+    border-radius: 15px;
+    padding: 10px;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.boton img {
+    width: 80px;
+    height: 80px;
+}
+
+.boton span {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #FFF;
+}
+
+.boton:hover {
+    transform: scale(1.1);
+}

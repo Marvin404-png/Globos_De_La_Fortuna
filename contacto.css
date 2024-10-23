@@ -1,0 +1,82 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(121, 22, 235); /* Fondo oscuro */
+    color: #fff; /* Texto en blanco */
+}
+
+header {
+    background-color: #cd18d3; /* Rojo oscuro */
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+h2 {
+    color: #c00; /* Rojo claro para los títulos */
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #900; /* Rojo oscuro */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+section {
+    margin: 20px 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 5px 0;
+}
+
+input, textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #c00; /* Rojo claro */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #900; /* Rojo oscuro en hover */
+}

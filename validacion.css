@@ -1,0 +1,74 @@
+/* Estilos del formulario de validación */
+
+body {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    background: url('https://img.freepik.com/vector-gratis/fondo-carnaval-plano_23-2149257277.jpg?t=st=1726768085~exp=1726771685~hmac=1e2ac72f8bbba9f06347057be43439e2fbd634025fb6ba213990219442baf127&w=740') no-repeat center center/cover;
+    background-repeat: no-repeat;
+}
+
+#validacion-edad {
+    width: 200px;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    vertical-align: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    justify-content: center;
+    background-color: #033369;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(119, 125, 211, 0.1);
+}
+#validacion-edad h2 {
+    padding: 8px;
+    text-align: center;
+    color: #fafafa;
+}
+
+#validacion-edad form {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#validacion-edad label {
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin: 10px 0 5px;
+    color: rgb(247, 247, 247);
+}
+
+#validacion-edad input {
+    width: 100px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+#validacion-edad button {
+    width: 100px;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #a8a7ee;
+    color: white;
+    font-size: 1.2em;
+    border: none;
+    cursor: pointer;
+}
+
+#validacion-edad button:hover {
+    background-color: #12c3f0;
+}
+

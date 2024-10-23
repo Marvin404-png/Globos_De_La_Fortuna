@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Globos de la Fortuna</title>
+    <link rel="stylesheet" href="inicio.css">
+</head>
+<body>
+
+    <!-- Icono de hamburguesa para la barra de navegación -->
+    <div class="menu-icono" onclick="toggleMenu()">
+        <div class="linea"></div>
+        <div class="linea"></div>
+        <div class="linea"></div>
+    </div>
+
+    <!-- Barra de Navegación -->
+    <nav class="navegacion">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="sobreNosotros.html">Sobre Nosotros</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Título y Eslogan -->
+    <header class="header">
+        <div class="logo-contenedor">
+            <img src="img/Imagen_de_WhatsApp_2024-09-17_a_las_19.53.56_c72cb307-removebg-preview.png" alt="Logo" class="logo">
+        </div>
+    </header>
+    
+    <!-- Botones -->
+    <div class="botones-vertical">
+        <button id="nivel1" class="boton" onclick="window.location.href='parvularia.html'">
+            <img src="img/2151676624.jpg" alt="Nivel 1">
+            <span>Nivel 1</span>
+        </button>
+        <button id="nivel2" class="boton" onclick="window.location.href='basica.html'">
+            <img src="img/26152734_7128436.jpg" alt="Nivel 2">
+            <span>Nivel 2</span>
+        </button>
+        <button id="nivel3" class="boton" onclick="window.location.href='bachillerato.html'">
+            <img src="img/istockphoto-656747176-612x612.jpg" alt="Nivel 3">
+            <span>Nivel 3</span>
+        </button>
+    </div>
+
+    <script>
+        // Obtener la edad desde el almacenamiento local
+        const edad = localStorage.getItem('edad');
+
+        if (edad) {
+            const edadInt = parseInt(edad);
+            
+            // Deshabilitar botones según la edad
+            if (edadInt <= 9) {
+                document.getElementById('nivel2').disabled = true;
+                document.getElementById('nivel3').disabled = true;
+            } else if (edadInt > 9 && edadInt <= 12) {
+                document.getElementById('nivel1').disabled = true;
+                document.getElementById('nivel3').disabled = true;
+            } else if (edadInt > 12 && edadInt <= 19) {
+                document.getElementById('nivel1').disabled = true;
+                document.getElementById('nivel2').disabled = true;
+            }
+        } else {
+            alert("No se ha ingresado la edad correctamente.");
+        }
+
+        // Función para mostrar u ocultar la barra de navegación al hacer clic
+        function toggleMenu() {
+            const nav = document.querySelector('.navegacion');
+            nav.classList.toggle('activo');  // Alternar clase 'activo'
+        }
+    </script>
+
+
+</body>
+</html>
